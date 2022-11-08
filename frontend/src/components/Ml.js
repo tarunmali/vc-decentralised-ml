@@ -68,25 +68,6 @@ async function app() {
     }
   }
 
-// async function setupWebcam() {
-// return new Promise((resolve, reject) => {
-//     const navigatorAny = navigator;
-//     navigator.getUserMedia = navigator.getUserMedia ||
-//     navigatorAny.webkitGetUserMedia || navigatorAny.mozGetUserMedia ||
-//     navigatorAny.msGetUserMedia;
-//     if (navigator.getUserMedia) {
-//     navigator.getUserMedia({ video: true },
-//         stream => {
-//         // webcamElement.srcObject = stream;
-//         // webcamElement.addEventListener('loadeddata', () => resolve(), false);
-//         videoRef.current.addEventListener('loadeddata', () => resolve(), false);
-//         },
-//         error => reject());
-//     } else {
-//     reject();
-//     }
-// });
-// }
 
 
 const Ml = () => {
@@ -109,30 +90,29 @@ const Ml = () => {
       app();
     }, []);
   
-    // console.log(videoRef);
-  
+
     return (
-      // <div>
-      //             <div>
-      //             <button onClick={learn}> Correct Posture</button>
-      //             <button onClick={earn}> Wrong posture</button>
-      //             </div>      
-      //   <video 
-      //     ref={videoRef}
-      //     autoPlay
-      //   />
-      // </div>
   
-    //   net!==0?
-    1?
+      net!==0?
+    // 1?
       
       <div>
       <button onClick={learn}> Correct Posture</button>
       <button onClick={earn}> Wrong posture</button>
-      {/* <video 
+      <video 
   ref={videoRef}
-  height="0"
-  /> */}
+  autoPlay
+  height="1"
+  width="1"
+  hidden="true"
+  />
+
+
+      </div>:      
+  
+  
+  <div>  
+  <h1>Machine learning model loading </h1>
   <video 
   ref={videoRef}
   autoPlay
@@ -140,29 +120,13 @@ const Ml = () => {
   width="1"
   hidden="true"
   />
-      </div>:      
   
   
-  <div>  
-    {/* <video 
-  ref={videoRef}
-  autoPlay
-  /> */}
-  <h1>Machine learning model loading </h1></div>
+  </div>
   
     );
   
-  
-  
-  
-  //   return (
-  //     <div class="container">
-  //     <div class="buttons">
-  //     <button id="class-a">Right Posture</button>
-  //     <button id="class-b">Wrong Posture</button>
-  // </div>
-  //     </div>
-  //     ); 
+
   
   };
   
