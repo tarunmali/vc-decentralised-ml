@@ -4,7 +4,7 @@ import * as mobilenet from "@tensorflow-models/mobilenet";
 import * as tf from '@tensorflow/tfjs';
 import * as knnClassifier from '@tensorflow-models/knn-classifier';
 
-///////
+
 const classifier = knnClassifier.create();
 
 let net=0,setNet;
@@ -63,7 +63,6 @@ async function app() {
           document.body.style = 'background: red;';  
         }
       }
-  
       await tf.nextFrame();
     }
   }
@@ -71,12 +70,9 @@ async function app() {
 
 
 const Ml = () => {
-  
-
     [counter, setCounter] = useState(0);
     [net, setNet] = useState(0);
     videoRef = useRef(null);
-  
     useEffect(() => {
       const getUserMedia = async () => {
         try {
@@ -89,13 +85,10 @@ const Ml = () => {
       getUserMedia();
       app();
     }, []);
-  
 
     return (
-  
-      net!==0?
-    // 1?
-      
+
+      net!==0?      
       <div>
       <button onClick={learn}> Correct Posture</button>
       <button onClick={earn}> Wrong posture</button>
@@ -112,16 +105,7 @@ const Ml = () => {
   
   
   <div>  
-  <h1>Machine learning model loading </h1>
-  <video 
-  ref={videoRef}
-  autoPlay
-  height="1"
-  width="1"
-  hidden="true"
-  />
-  
-  
+  <h1>Machine learning model loading </h1>  
   </div>
   
     );
