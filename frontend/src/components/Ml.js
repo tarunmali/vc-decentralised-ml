@@ -129,21 +129,26 @@ const Ml = () => {
       <div>
       <button onClick={learn}> Correct Posture</button>
       <button onClick={earn}> Wrong posture</button>
-      <video 
+      {/* <video 
   ref={videoRef}
-  autoPlay
-  />
+  height="0"
+  /> */}
   <video 
   ref={videoRef}
   autoPlay
+  height="1"
+  width="1"
+  hidden="true"
   />
       </div>:      
   
   
-  <div>  <video 
+  <div>  
+    {/* <video 
   ref={videoRef}
   autoPlay
-  /><h1>Machine learning model loading </h1></div>
+  /> */}
+  <h1>Machine learning model loading </h1></div>
   
     );
   
