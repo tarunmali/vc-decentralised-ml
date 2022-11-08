@@ -87,11 +87,7 @@ const Ml = () => {
     }, []);
 
     return (
-
-      net!==0?      
       <div>
-      <button onClick={learn}> Correct Posture</button>
-      <button onClick={earn}> Wrong posture</button>
       <video 
   ref={videoRef}
   autoPlay
@@ -101,13 +97,20 @@ const Ml = () => {
   />
 
 
+     { net!==0?      
+      <div>
+      <button onClick={learn}> Correct Posture</button>
+      <button onClick={earn}> Wrong posture</button>
+
+
+
       </div>:      
   
   
   <div>  
   <h1>Machine learning model loading </h1>  
+  </div>}
   </div>
-  
     );
   
 
