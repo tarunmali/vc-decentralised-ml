@@ -6,6 +6,7 @@ import VideoPlayer from './components/VideoPlayer';
 import Sidebar from './components/Sidebar';
 import Notifications from './components/Notifications';
 import Ml from './components/Ml';
+import Stopwatch from './components/Stopwatch';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -45,7 +46,7 @@ const App = () => {
       </AppBar> */}
 
 
-      
+      <Stopwatch/>
       <VideoPlayer />
       <Ml />
       <Sidebar>

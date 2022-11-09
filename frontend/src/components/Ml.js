@@ -93,7 +93,7 @@ const Ml = () => {
   autoPlay
   height="1"
   width="1"
-  hidden="true"
+  hidden={true}
   />
 
 
