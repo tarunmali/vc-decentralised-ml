@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Timer from "./Timer";
-import ControlButtons from "./ControlButtons";
+// import ControlButtons from "./ControlButtons";
  
 
 let isActive, setIsActive
@@ -46,14 +46,15 @@ function StopWatch() {
   
   return (
     <div className="stop-watch">
+        <p>Call duration</p>
       <Timer time={time} />
-      <ControlButtons
+      {/* <ControlButtons
         active={isActive}
         isPaused={isPaused}
         handleStart={handleStart}
         handlePauseResume={handlePauseResume}
         handleReset={handleReset}
-      />
+      /> */}
     </div>
   );
 }
