@@ -4,7 +4,7 @@ import * as mobilenet from "@tensorflow-models/mobilenet";
 import * as tf from '@tensorflow/tfjs';
 import * as knnClassifier from '@tensorflow-models/knn-classifier';
 import {shandleStart1,shandlePauseResume1} from './Sstopwatch1'
-import {shandleStart,shandlePauseResume} from './Sstopwatch'
+import {shandleStart,shandlePauseResume} from './Sstopwatchs'
 
 
 const classifier = knnClassifier.create();

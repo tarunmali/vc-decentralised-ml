@@ -1,6 +1,6 @@
 import React from "react";  
 import Stopwatch from "./Stopwatch";
-import Sstopwatch from './Sstopwatch';
+import Sstopwatch from './Sstopwatchs';
 function Time () 
 { 
     return (  

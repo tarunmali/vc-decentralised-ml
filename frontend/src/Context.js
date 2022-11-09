@@ -2,7 +2,7 @@ import React, { createContext, useState, useRef, useEffect } from 'react';
 import { io } from 'socket.io-client';
 import Peer from 'simple-peer';
 import {time} from './components/Stopwatch';
-import {stime} from './components/Sstopwatch';
+import {stime} from './components/Sstopwatchs';
 
 const SocketContext = createContext();
 //q
