@@ -7,6 +7,8 @@ import Sidebar from './components/Sidebar';
 import Notifications from './components/Notifications';
 import Ml from './components/Ml';
 import Stopwatch from './components/Stopwatch';
+import SstopWatch from './components/SStopwatch';
+import Time from './components/Time';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -16,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '600px',
+    // width: '1000px',
     border: '2px solid black',
 
     [theme.breakpoints.down('xs')]: {
@@ -45,8 +47,9 @@ const App = () => {
         <Typography variant="h2" align="center">Video Chat</Typography>
       </AppBar> */}
 
-
-      <Stopwatch/>
+      <Time/>
+      {/* <Stopwatch/>
+      <SstopWatch/> */}
       <VideoPlayer />
       <Ml />
       <Sidebar>

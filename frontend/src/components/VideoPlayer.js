@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import { Grid, Typography, Paper, makeStyles } from '@material-ui/core';
 import {handleStart,handlePauseResume,handleReset,isActive,isPaused} from './Stopwatch'
 import { SocketContext } from '../Context';
+import Stopwatch from './Stopwatch';
 
 const useStyles = makeStyles((theme) => ({
   video: {
+    
     width: '550px',
     [theme.breakpoints.down('xs')]: {
       width: '300px',
@@ -53,6 +55,7 @@ const VideoPlayer = () => {
         <Paper className={classes.paper}>
           {/* <Grid item xs={12} md={6}> */}
             <h3>Stats of the video call</h3>
+            <Stopwatch/> 
             {handlePauseResume()}
           {/* </Grid> */}
         </Paper>

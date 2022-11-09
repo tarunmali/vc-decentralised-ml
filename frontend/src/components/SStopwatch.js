@@ -22,7 +22,7 @@ const handleStart = () => {
   };
 
 
-function StopWatch() {
+function SstopWatch() {
   [isActive, setIsActive] = useState(false);
   [isPaused, setIsPaused] = useState(true);
   [time, setTime] = useState(0);
@@ -46,11 +46,11 @@ function StopWatch() {
   
   return (
     <div >
-      <h3 className="karan"> <b>Call duration</b>  </h3>
+      <h3 className="karan"> <b>Correct posture duration</b> </h3>
       <Timer time={time} />
     </div>
   );
 }
   
-export default StopWatch;
+export default SstopWatch;
 export {handleStart,handlePauseResume,handleReset};
