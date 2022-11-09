@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Grid, Typography, Paper, makeStyles } from '@material-ui/core';
-
+import {handleStart,handlePauseResume,handleReset,isActive,isPaused} from './Stopwatch'
 import { SocketContext } from '../Context';
 
 const useStyles = makeStyles((theme) => ({
@@ -43,6 +43,7 @@ const VideoPlayer = () => {
           <Grid item xs={12} md={6}>
             <Typography variant="h5" gutterBottom>{call.name || 'Name'}</Typography>
             <video playsInline ref={userVideo} autoPlay className={classes.video} />
+            {handleStart()}
           </Grid>
         </Paper>
       )}
