@@ -45,16 +45,9 @@ function StopWatch() {
 
   
   return (
-    <div className="stop-watch">
-        <p>Call duration</p>
+    <div >
+      <h3>&zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;   Call duration</h3>
       <Timer time={time} />
-      {/* <ControlButtons
-        active={isActive}
-        isPaused={isPaused}
-        handleStart={handleStart}
-        handlePauseResume={handlePauseResume}
-        handleReset={handleReset}
-      /> */}
     </div>
   );
 }
