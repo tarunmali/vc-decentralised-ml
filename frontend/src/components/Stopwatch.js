@@ -1,11 +1,31 @@
 import React, { useState } from "react";
 import Timer from "./Timer";
 import ControlButtons from "./ControlButtons";
+ 
+
+let isActive, setIsActive
+let isPaused, setIsPaused
+let time, setTime
+
+const handleStart = () => {
+    setIsActive(true);
+    setIsPaused(false);
+  };
   
+  const handlePauseResume = () => {
+    setIsPaused(!isPaused);
+  };
+  
+  const handleReset = () => {
+    setIsActive(false);
+    setTime(0);
+  };
+
+
 function StopWatch() {
-  const [isActive, setIsActive] = useState(false);
-  const [isPaused, setIsPaused] = useState(true);
-  const [time, setTime] = useState(0);
+  [isActive, setIsActive] = useState(false);
+  [isPaused, setIsPaused] = useState(true);
+  [time, setTime] = useState(0);
   
   React.useEffect(() => {
     let interval = null;
@@ -22,19 +42,7 @@ function StopWatch() {
     };
   }, [isActive, isPaused]);
   
-  const handleStart = () => {
-    setIsActive(true);
-    setIsPaused(false);
-  };
-  
-  const handlePauseResume = () => {
-    setIsPaused(!isPaused);
-  };
-  
-  const handleReset = () => {
-    setIsActive(false);
-    setTime(0);
-  };
+
   
   return (
     <div className="stop-watch">
@@ -51,3 +59,4 @@ function StopWatch() {
 }
   
 export default StopWatch;
+export {handleStart,handlePauseResume,handleReset};

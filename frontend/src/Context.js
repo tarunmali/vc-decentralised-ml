@@ -35,6 +35,9 @@ const ContextProvider = ({ children }) => {
   }, []);
 
   const answerCall = () => {
+    //call handleStart function of the stopwatch
+    // handleStart();
+
     setCallAccepted(true);
 
     const peer = new Peer({ initiator: false, trickle: false, stream });
