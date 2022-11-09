@@ -7,18 +7,19 @@ let isActive, setIsActive
 let isPaused, setIsPaused
 let time, setTime
 
-const handleStart = () => {
+const handleStart1 = () => {
     setIsActive(true);
     setIsPaused(false);
   };
   
-  const handlePauseResume = () => {
+  const handlePauseResume1 = () => {
     setIsPaused(!isPaused);
   };
   
 
 
-function Stopwatch() {
+
+function Stopwatch1() {
   [isActive, setIsActive] = useState(false);
   [isPaused, setIsPaused] = useState(true);
   [time, setTime] = useState(0);
@@ -42,11 +43,11 @@ function Stopwatch() {
   
   return (
     <div >
-      <h3 className="karan"> <b>Call duration</b>  </h3>
+      <h3 className="karan"> <b>Call duration</b> </h3>
       <Timer time={time} />
     </div>
   );
 }
   
-export default Stopwatch;
-export {handleStart,handlePauseResume,time};
+export default Stopwatch1;
+export {handleStart1,handlePauseResume1};

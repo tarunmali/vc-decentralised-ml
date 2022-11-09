@@ -1,6 +1,8 @@
 import React, { createContext, useState, useRef, useEffect } from 'react';
 import { io } from 'socket.io-client';
 import Peer from 'simple-peer';
+import {time} from './components/Stopwatch';
+import {stime} from './components/Sstopwatch';
 
 const SocketContext = createContext();
 
@@ -79,8 +81,9 @@ const ContextProvider = ({ children }) => {
     setCallEnded(true);
 
     connectionRef.current.destroy();
-
+    console.log("time",time);
     // window.location.reload();
+    console.log("stime",stime);
   };
 
   return (

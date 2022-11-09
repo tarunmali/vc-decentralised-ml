@@ -1,15 +1,15 @@
 import React from "react";  
-import StopWatch from "./Stopwatch";
-import SstopWatch from "./SStopwatch";
+import Stopwatch from "./Stopwatch";
+import Sstopwatch from './Sstopwatch';
 function Time () 
 { 
     return (  
         <div className="row" style={{width:'600px'}}>
             <div className="col-md-4">
-                <StopWatch/>
+                <Stopwatch/>
             </div>
             <div className="col-md-6 offset-md-1">
-                <SstopWatch/>
+                <Sstopwatch/>
             </div>
         </div>
         );  

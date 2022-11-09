@@ -5,34 +5,30 @@ import Timer from "./Timer";
 
 let isActive, setIsActive
 let isPaused, setIsPaused
-let time, setTime
+let stime, setTime
 
-const handleStart = () => {
+const shandleStart = () => {
     setIsActive(true);
     setIsPaused(false);
   };
   
-  const handlePauseResume = () => {
+  const shandlePauseResume = () => {
     setIsPaused(!isPaused);
   };
   
-  const handleReset = () => {
-    setIsActive(false);
-    setTime(0);
-  };
 
 
-function SstopWatch() {
+function Sstopwatch() {
   [isActive, setIsActive] = useState(false);
   [isPaused, setIsPaused] = useState(true);
-  [time, setTime] = useState(0);
+  [stime, setTime] = useState(0);
   
   React.useEffect(() => {
     let interval = null;
   
     if (isActive && isPaused === false) {
       interval = setInterval(() => {
-        setTime((time) => time + 10);
+        setTime((stime) => stime + 10);
       }, 10);
     } else {
       clearInterval(interval);
@@ -46,11 +42,11 @@ function SstopWatch() {
   
   return (
     <div >
-      <h3 className="karan"> <b>Correct posture duration</b> </h3>
-      <Timer time={time} />
+      <h3 className="karan"> <b>Correct posture duration</b>  </h3>
+      <Timer time={stime} />
     </div>
   );
 }
   
-export default SstopWatch;
-export {handleStart,handlePauseResume,handleReset};
+export default Sstopwatch;
+export {shandleStart,shandlePauseResume,stime};

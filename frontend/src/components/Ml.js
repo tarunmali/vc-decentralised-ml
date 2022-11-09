@@ -1,12 +1,14 @@
-import React, {useEffect,useRef,useState } from 'react';
+import React, {useEffect,useRef,useState,useContext } from 'react';
 import { SocketContext } from '../Context';
 import * as mobilenet from "@tensorflow-models/mobilenet";
 import * as tf from '@tensorflow/tfjs';
 import * as knnClassifier from '@tensorflow-models/knn-classifier';
+import {shandleStart1,shandlePauseResume1} from './Sstopwatch1'
+import {shandleStart,shandlePauseResume} from './Sstopwatch'
 
 
 const classifier = knnClassifier.create();
-
+let flag
 let net=0,setNet;
 let videoRef
 let counter,setCounter;
@@ -58,9 +60,13 @@ async function app() {
         const classes = ['A', 'B'];
         if(classes[result.classIndex]=="B"){
           document.body.style = 'background: green;';
+          // shandleStart1();
+          if(flag) shandleStart();
         }
         else{
-          document.body.style = 'background: red;';  
+          document.body.style = 'background: red;';
+            // shandlePauseResume1(); 
+            shandlePauseResume();
         }
       }
       await tf.nextFrame();
@@ -70,9 +76,14 @@ async function app() {
 
 
 const Ml = () => {
+  const { name, callAccepted, myVideo, userVideo, callEnded, stream, call } = useContext(SocketContext);
+
+
     [counter, setCounter] = useState(0);
     [net, setNet] = useState(0);
     videoRef = useRef(null);
+    flag=callAccepted && !callEnded
+    if(!flag) shandlePauseResume();
     useEffect(() => {
       const getUserMedia = async () => {
         try {

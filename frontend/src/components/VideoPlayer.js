@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Grid, Typography, Paper, makeStyles } from '@material-ui/core';
-import {handleStart,handlePauseResume,handleReset,isActive,isPaused} from './Stopwatch'
+
+import {handleStart,handlePauseResume} from './Stopwatch'
+import Cook from './Cook';
 import { SocketContext } from '../Context';
-import Stopwatch from './Stopwatch';
+
 
 const useStyles = makeStyles((theme) => ({
   video: {
@@ -28,6 +30,14 @@ const useStyles = makeStyles((theme) => ({
 const VideoPlayer = () => {
   const { name, callAccepted, myVideo, userVideo, callEnded, stream, call } = useContext(SocketContext);
   const classes = useStyles();
+  if(callAccepted && !callEnded){
+    {handleStart()}
+    // {handleStart1()}   
+  }
+  else{
+    {handlePauseResume()}
+    // {handlePauseResume1()}
+  }
 
 
   return (
@@ -46,19 +56,12 @@ const VideoPlayer = () => {
           <Grid item xs={12} md={6}>
             <Typography variant="h5" gutterBottom>{call.name || 'Name'}</Typography>
             <video playsInline ref={userVideo} autoPlay className={classes.video} />
-            {handleStart()}
           </Grid>
         </Paper>
       )}
       {!(callAccepted && !callEnded) && 
       (
-        <Paper className={classes.paper}>
-          {/* <Grid item xs={12} md={6}> */}
-            <h3 style={{textAlign: 'center' }}>Stats of the video call</h3>
-            <Stopwatch/> 
-            {handlePauseResume()}
-          {/* </Grid> */}
-        </Paper>
+        <Cook/>
       )
       }
 
@@ -69,3 +72,4 @@ const VideoPlayer = () => {
 };
 
 export default VideoPlayer;
+

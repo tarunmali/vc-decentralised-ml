@@ -1,6 +1,6 @@
 import React from "react";
   
-export default function Ttimer(props) {
+export default function Timer(props) {
   return (
     <div className="timer">
       <span className="digits">
