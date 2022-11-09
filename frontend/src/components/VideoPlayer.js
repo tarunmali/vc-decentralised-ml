@@ -54,7 +54,7 @@ const VideoPlayer = () => {
       (
         <Paper className={classes.paper}>
           {/* <Grid item xs={12} md={6}> */}
-            <h3>Stats of the video call</h3>
+            <h3 style={{textAlign: 'center' }}>Stats of the video call</h3>
             <Stopwatch/> 
             {handlePauseResume()}
           {/* </Grid> */}
