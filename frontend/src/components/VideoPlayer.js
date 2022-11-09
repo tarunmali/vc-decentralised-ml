@@ -47,6 +47,19 @@ const VideoPlayer = () => {
           </Grid>
         </Paper>
       )}
+      {!(callAccepted && !callEnded) && 
+      (
+        <Paper className={classes.paper}>
+          {/* <Grid item xs={12} md={6}> */}
+            <h3>Stats of the video call</h3>
+            {handlePauseResume()}
+          {/* </Grid> */}
+        </Paper>
+      )
+      }
+
+
+
     </Grid>
   );
 };
