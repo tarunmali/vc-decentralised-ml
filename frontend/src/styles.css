@@ -117,20 +117,24 @@ video {
 }
 
 .col-md-4{
-  background-color: aqua;
+  background-color:#B6C2D9;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.74);
   border-radius: 10px;
 }
 
 .col-md-6{
-  background-color: aqua;
+  background-color: #B6C2D9;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.74);
   border-radius: 10px;
 }
 
 .suraj{
-  background-color: aqua;
+  background-color: #B6C2D9;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.74);
   border-radius: 10px;
   padding: 8px 8px;
+}
+
+.boom{
+  background-color: red;
 }

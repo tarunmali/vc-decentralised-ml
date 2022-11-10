@@ -21,9 +21,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   paper: {
+    backgroundColor:'#B6C2D9',
     padding: '10px',
-    border: '2px solid black',
+    border: '3px solid black',
     margin: '10px',
+    borderRadius: '10px',
   },
 }));
 

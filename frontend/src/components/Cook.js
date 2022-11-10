@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
       padding: '10px',
       border: '2px solid black',
       margin: '10px',
+      backgroundColor:'#B6C2D9',
     },
   }));
 

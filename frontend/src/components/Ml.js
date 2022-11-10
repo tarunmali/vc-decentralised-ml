@@ -109,9 +109,9 @@ const Ml = () => {
 
 
      { net!==0?      
-      <div>
-      <button onClick={learn}> Correct Posture</button>
-      <button onClick={earn}> Wrong posture</button>
+      <div className='form-inline' style={{width:'500px'}}>
+      <button className='col-md-5' onClick={learn}> Correct Posture</button>
+      <button className='boom col-md-5 offset-1' onClick={earn}> Wrong posture</button>
 
 
 
