@@ -4,9 +4,17 @@ import Cookies from 'js-cookie';
 
 let count=0;
 
-function about() {
+function fail() {
   // count++
-  window.open('https://stackoverflow.com/','_blank');
+  window.open('https://sharmayashasvi.github.io/fail_page/','_blank');
+  // window.open("https://stackoverflow.com/", "", "width=200,height=100"); 
+}
+
+
+
+function success() {
+  // count++
+  window.open('https://sharmayashasvi.github.io/success_page/','_blank');
   // window.open("https://stackoverflow.com/", "", "width=200,height=100"); 
 }
 
@@ -21,7 +29,8 @@ function Ssstopwatch1() {
   
   
   useEffect(()=>{
-    if(pps<10 && pps!=0) about();
+    if(pps<6 && pps!=0) fail();
+    if(pps>=6 && pps!=0) success();
     }, [])
 
 
