@@ -1,6 +1,16 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Timer from "./Timer";
 import Cookies from 'js-cookie';
+
+let count=0;
+
+function about() {
+  // count++
+  window.open('https://stackoverflow.com/','_blank');
+  // window.open("https://stackoverflow.com/", "", "width=200,height=100"); 
+}
+
+
 
 
 function Ssstopwatch1() {
@@ -9,6 +19,12 @@ function Ssstopwatch1() {
   const time = Cookies.get('time');
   let pps=0;
   if(time!=0 && time>stime) pps=(stime/time)*10;
+  
+  useEffect(()=>{
+    if(pps<10 && pps!=0) about();
+    }, [])
+
+
   return (
       
     <div >
