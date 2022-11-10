@@ -26,7 +26,7 @@ function Ssstopwatch1() {
   const stime = Cookies.get('stime');
   const time = Cookies.get('time');
   let pps=0;
-  
+  time!=0 && time>stime && (pps=(stime/time)*100) && (pps=pps.toFixed(2));
   
   useEffect(()=>{
     if(pps<6 && pps!=0) fail();
@@ -41,7 +41,7 @@ function Ssstopwatch1() {
       <Timer time={time-stime} />
 
       <h3 className="karan"> <b>Predicted Posture Score</b> </h3>
-      {time!=0 && time>stime && (<h3 className="karan" style={{color: "blue"}}> <b>{pps=(stime/time)*100}</b> </h3>)}
+ <h3 className="karan" style={{color: "blue"}}> <b>{pps}</b> </h3>
       
 
     </div>

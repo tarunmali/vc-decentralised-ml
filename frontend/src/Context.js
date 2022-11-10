@@ -82,12 +82,12 @@ const ContextProvider = ({ children }) => {
 
     connectionRef.current.destroy();
     console.log("time",time);
-    // window.location.reload();
     console.log("stime",stime);
     //save time to browser cookies
     document.cookie = "time="+time;
     document.cookie = "stime="+stime;
     // window.location.href = "https://yashasvibahva2.herokuapp.com/feedback";
+    // window.location.reload();
 
 
 
