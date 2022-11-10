@@ -119,7 +119,7 @@ const Ml = () => {
   
   
   <div>  
-  <h1> <b>Machine learning model loading</b>  </h1>  
+  <h1 className='suraj'> <b>Machine learning model loading</b>  </h1>  
   </div>}
   </div>
     );

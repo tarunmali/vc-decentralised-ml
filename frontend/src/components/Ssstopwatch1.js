@@ -41,7 +41,7 @@ function Ssstopwatch1() {
       <Timer time={time-stime} />
 
       <h3 className="karan"> <b>Predicted Posture Score</b> </h3>
-      {time!=0 && time>stime && (<h3>{pps=(stime/time)*100}</h3>)}
+      {time!=0 && time>stime && (<h3 className="karan" style={{color: "blue"}}> <b>{pps=(stime/time)*100}</b> </h3>)}
       
 
     </div>
