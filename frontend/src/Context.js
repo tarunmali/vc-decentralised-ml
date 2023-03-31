@@ -6,7 +6,7 @@ import {stime} from './components/Sstopwatchs';
 
 const SocketContext = createContext();
 // //q
-const socket = io();
+const socket = io('https://vidchatbackend-tdodo.ondigitalocean.app/');
 // const socket = io('https://seashell-app-55chy.ondigitalocean.app/');
 
 const ContextProvider = ({ children }) => {
