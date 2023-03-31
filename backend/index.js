@@ -22,17 +22,14 @@ io.on("connection", (socket) => {
 
 	socket.on("disconnect", () => {
 		socket.broadcast.emit("callEnded")
-		console.log("1");
 	});
 
 	socket.on("callUser", ({ userToCall, signalData, from, name }) => {
 		io.to(userToCall).emit("callUser", { signal: signalData, from, name });
-		console.log("2");
 	});
 
 	socket.on("answerCall", (data) => {
 		io.to(data.to).emit("callAccepted", data.signal)
-		console.log("3");
 	});
 });
 
