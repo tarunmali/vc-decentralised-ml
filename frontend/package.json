@@ -2,7 +2,7 @@
 	"name": "client",
 	"version": "0.1.0",
 	"private": true,
-	"proxy": "https://vidchatbackend-tdodo.ondigitalocean.app/",
+	"proxy": "https://vidchatbacend.onrender.com/",
 	"dependencies": {
 		"@material-ui/core": "^4.11.3",
 		"@material-ui/icons": "^4.11.2",
